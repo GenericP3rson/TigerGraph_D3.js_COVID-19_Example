@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Load d3.js and scale chromatic (for colouration)-->
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+  <!-- Load Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <!-- Create a Navigation Bar -->
+  <nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#" margin-left="10px">
+        &emsp;
+      <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/vootpjtmcyx0gt79zl6r" 
+      width="30" height="30" class="d-inline-block align-top" alt="">
+      TigerGraph
+    </a>
+  </nav>
+
+  <!-- Create two columns with cards for the charts -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="card h-100"><div class="card-body">
+          <h5 class="card-title">Bubble Graph of Weather</h5> 
+          <div id="bubble_graph" width="700" height="300"></div> <!--Bubble graph will be added here-->
+        </div></div>
+      </div>
+      <div class="col-sm">
+        <div class="card h-100"><div class="card-body">
+          <h5 class="card-title">Histogram of Max Wind Speeds</h5>
+          <div id="my_dataviz" width="700" height="250"></div> <!--Histogram will be added here-->
+          <p>
+            <label># bins</label>
+            <input type="number" min="1" max="100" step="30" value="20" id="nBin">
+          </p>
+        </div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="card h-100"><div class="card-body">
+          <h5 class="card-title">Map of Infection Cases</h5>
+          <div id="map_korea" width="440" height="300"></div> <!--Map of infectious cases will be added here-->
+        </div></div>
+      </div>
+      <div class="col-sm">
+        <div class="card h-100"><div class="card-body">
+          <h5 class="card-title">Pie Chart of Age of Infected Patients</h5>
+          <div id="pie_chart" width="440" height="300"></div> <!--Pie chart of infection patient ages will be added here-->
+        </div></div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Creating Charts in JS -->
+  <script src="main.js"></script>
+
+</body>
+
+</html>
